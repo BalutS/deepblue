@@ -38,6 +38,9 @@ public class Animal {
     )
     private MedicalRecord medicalRecord;
 
+    @Column(name = "tracking_device_code", unique = true)
+    private String trackingDeviceCode;
+
     @OneToMany(mappedBy = "animal")
     private List<Treatment> treatments = new ArrayList<>();
 
@@ -103,6 +106,14 @@ public class Animal {
 
     public MedicalRecord getMedicalRecord() {
         return medicalRecord;
+    }
+
+    public String getTrackingDeviceCode() {
+        return trackingDeviceCode;
+    }
+
+    public void setTrackingDeviceCode(String trackingDeviceCode) {
+        this.trackingDeviceCode = trackingDeviceCode;
     }
 
     public List<Treatment> getTreatments() {
