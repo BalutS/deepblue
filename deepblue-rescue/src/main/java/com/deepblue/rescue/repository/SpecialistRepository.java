@@ -9,11 +9,6 @@ import java.util.List;
 
 public interface SpecialistRepository extends JpaRepository<Specialist, Long> {
 
-    // Paso 39 - JPQL: especialistas activos con determinada experiencia.
-    // Nota (paso 40): JPQL usa nombres de ENTIDAD (Specialist, expertiseAreas),
-    // no nombres de TABLA (specialists, specialist_expertise), porque JPQL
-    // consulta el modelo de objetos mapeado, no las tablas físicas;
-    // Hibernate traduce esos nombres a SQL real en tiempo de ejecución.
     @Query("""
             select distinct s
             from Specialist s

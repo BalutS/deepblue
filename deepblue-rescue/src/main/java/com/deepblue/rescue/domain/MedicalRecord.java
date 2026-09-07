@@ -29,7 +29,6 @@ public class MedicalRecord {
     private Animal animal;
 
     protected MedicalRecord() {
-        // requerido por JPA
     }
 
     public MedicalRecord(BigDecimal initialWeight, String initialCondition, String injuries, String observations) {

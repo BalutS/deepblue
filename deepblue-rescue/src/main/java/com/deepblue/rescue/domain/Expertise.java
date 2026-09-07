@@ -20,7 +20,6 @@ public class Expertise {
     private Set<Specialist> specialists = new HashSet<>();
 
     protected Expertise() {
-        // requerido por JPA
     }
 
     public Expertise(String name) {
